@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UFT-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Cybersoft Javascript">
+    <meta name="keywords" content="Cybersoft, Javascript">
+    <meta name="author" content="Cybersoft">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link rel="icon" href="./images/download (2).jfif">
+
+    <!-- BS4 CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- TÍNH TIỀN LƯƠNG NHÂN VIÊN -->
+    <div class="card">
+        <div class="card-header">
+            Tính Tiền Lương Nhân Viên
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label for="">Số ngày công:</label>
+                <input type="text" name="" id="workDay" class="form-control" placeholder="Nhập số ngày công"
+                    aria-describedby="helpId">
+            </div>
+            <button class="btn btn-success" onclick="calcSalary()"> Tính toán</button>
+        </div>
+        <div class="card-footer text-muted" id="showPayRoll">
+            Footer
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- TÍNH TIỀN GIÁ TRỊ TRUNG BÌNH -->
+    <div class="card">
+        <div class="card-header">
+            Tính Giá Trị Trung Bình Của 5 Số Thực
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label for="">Số thực 1:</label>
+                <input type="text" name="" id="realNumber1" class="form-control" placeholder="Số thực 1"
+                    aria-describedby="helpId">
+            </div>
+            <div class="form-group">
+                <label for="">Số thực 2:</label>
+                <input type="text" name="" id="realNumber2" class="form-control" placeholder="Số thực 2"
+                    aria-describedby="helpId">
+            </div>
+            <div class="form-group">
+                <label for="">Số thực 3:</label>
+                <input type="text" name="" id="realNumber3" class="form-control" placeholder="Số thực 3"
+                    aria-describedby="helpId">
+            </div>
+            <div class="form-group">
+                <label for="">Số thực 4:</label>
+                <input type="text" name="" id="realNumber4" class="form-control" placeholder="Số thực 4"
+                    aria-describedby="helpId">
+            </div>
+            <div class="form-group">
+                <label for="">Số thực 5:</label>
+                <input type="text" name="" id="realNumber5" class="form-control" placeholder="Số thực 5"
+                    aria-describedby="helpId">
+            </div>
+            <button class="btn btn-success" onclick="calcAverageValue()"> Tính toán</button>
+        </div>
+        <div class="card-footer text-muted" id="showAverageValue">
+            Footer
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- QUY ĐỔI TIỀN  USD - VND -->
+    <div class="card">
+        <div class="card-header">
+            QUY ĐỔI TIỀN USD - VND
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label for="">USD:</label>
+                <input type="text" name="" id="usdCurrency" class="form-control" placeholder="Nhập số tiền USD"
+                    aria-describedby="helpId">
+            </div>
+            <button class="btn btn-success" onclick="calcPrice()"> Tính toán</button>
+        </div>
+        <div class="card-footer text-muted" id="showPrice">
+            Footer
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- TÍNH DIỆN TÍCH, CHU VI HÌNH CHỮ NHẬT-->
+    <div class="card">
+        <div class="card-header">
+            Tính Diện Tích & Chu Vi Hình Chữ Nhật
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label for="">Chiều dài:</label>
+                <input type="text" name="" id="length" class="form-control" placeholder="Nhập chiều dài HCN"
+                    aria-describedby="helpId">
+            </div>
+            <div class="form-group">
+                <label for="">Chiều rộng:</label>
+                <input type="text" name="" id="width" class="form-control" placeholder="Nhập chiều rộng HCN"
+                    aria-describedby="helpId">
+            </div>
+            <button class="btn btn-success" onclick="calcRectangle()"> Tính toán</button>
+        </div>
+        <div class="card-footer text-muted" id="showRectangle">
+            Footer
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- TÍNH TỔNG 2 KÝ SỐ-->
+    <div class="card">
+        <div class="card-header">
+            Tính Tổng 2 Ký Số
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label for="">Nhập số cần tính:</label>
+                <input type="text" name="" id="twoDigitNumbers" class="form-control" placeholder="Nhập số có 2 chữ số"
+                    aria-describedby="helpId">
+            </div>
+            <button class="btn btn-success" onclick="calcTotal()"> Tính toán</button>
+        </div>
+        <div class="card-footer text-muted" id="showTotal">
+            Footer
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- OPTIONAL JAVASCRIPT -->
+    <!-- JQUERY SLIM FIRST, THEN POPPERJS, THEN BS4 JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- JS MAIN -->
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
